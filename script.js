@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const envelope = document.getElementById("icon-mail");
+
+  const envelopeScreen = document.getElementById("envelope-container");
   const letter = document.getElementById("letter-container");
   const noBtn = document.querySelector(".no-btn");
   const yesBtn = document.querySelector(".yes-btn");
@@ -9,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.getElementById("letter-buttons");
   const finalText = document.getElementById("final-text");
 
-  // Open envelope
-  envelope.addEventListener("click", () => {
-    document.getElementById("envelope-container").style.display = "none";
+  // OPEN LETTER
+  envelopeScreen.addEventListener("click", () => {
+    envelopeScreen.style.display = "none";
     letter.style.display = "flex";
 
     setTimeout(() => {
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 50);
   });
 
-  // Move NO button
+  // NO BUTTON RUNS AWAY
   noBtn.addEventListener("mouseover", () => {
     const distance = 200;
     const angle = Math.random() * Math.PI * 2;
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
   });
 
-  // YES clicked
+  // YES BUTTON
   yesBtn.addEventListener("click", () => {
     title.textContent = "Yippeeee!";
     dogImg.src = "e02c71f0ce70f019d23280052d4b8da4.gif";
@@ -36,4 +37,5 @@ document.addEventListener("DOMContentLoaded", () => {
     buttons.style.display = "none";
     finalText.style.display = "block";
   });
+
 });
