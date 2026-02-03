@@ -1,16 +1,20 @@
 body {
   margin: 0;
   height: 100vh;
+  font-family: "Pixelify Sans", sans-serif;
+  overflow: hidden;
+}
+
+/* Envelope Screen (FULL PAGE) */
+#envelope-container {
+  position: fixed;
+  inset: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url("360_F_322324271_YJPsxqGYVWOy4ZfLmAb2jYL5vQfOOfZn.jpg");
-  font-family: "Pixelify Sans", sans-serif;
-}
-
-/* Envelope Screen */
-#envelope-container {
-  text-align: center;
+  text️z-index: 10;
   cursor: pointer;
 }
 
@@ -20,11 +24,9 @@ body {
   100% { transform: scale(1); }
 }
 
-/* FIXED ID */
 #icon-mail {
   width: 200px;
   animation: pulse 1.5s infinite;
-  cursor: pointer;
 }
 
 /* Letter Screen */
@@ -34,6 +36,8 @@ body {
   inset: 0;
   justify-content: center;
   align-items: center;
+  background-image: url("360_F_322324271_YJPsxqGYVWOy4ZfLmAb2jYL5vQfOOfZn.jpg");
+  z-index: 5;
 }
 
 .letter-window {
@@ -62,10 +66,6 @@ body {
   opacity: 1;
 }
 
-h1 { font-size: 30px; margin: 0; }
-p { font-size: 40px; }
-
-/* Dog */
 .dog {
   width: 250px;
   transition: width 0.4s ease;
@@ -75,30 +75,23 @@ p { font-size: 40px; }
   width: 180px;
 }
 
-/* Buttons */
 .buttons {
   display: flex;
-  justify-content: center;
   gap: 30px;
-  position: relative;
 }
-
-.no-wrapper { position: relative; }
 
 .btn {
   width: 120px;
   cursor: pointer;
-  user-select: none;
 }
 
 .no-btn {
-  transition: transform 0.15s ease;
-  cursor: default;
+  transition: transform 0.2s ease;
 }
 
 .final-text {
   font-size: 22px;
   padding: 10px 20px;
-  background-color: rgba(255,240,240,0.5);
+  background-color: rgba(255,240,240,0.6);
   border-radius: 12px;
 }
